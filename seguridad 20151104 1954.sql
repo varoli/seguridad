@@ -54,15 +54,13 @@ CREATE TABLE `bloqueoip` (
   `ip` varchar(45) NOT NULL,
   `fecha` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `bloqueoip`
 --
 
 /*!40000 ALTER TABLE `bloqueoip` DISABLE KEYS */;
-INSERT INTO `bloqueoip` (`id`,`ip`,`fecha`) VALUES 
- (3,'::1','');
 /*!40000 ALTER TABLE `bloqueoip` ENABLE KEYS */;
 
 
@@ -75,6 +73,7 @@ CREATE TABLE `pass` (
   `id_pass` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pass` varchar(40) DEFAULT NULL,
   `estado` int(11) DEFAULT NULL,
+  `fecha` varchar(45) NOT NULL,
   PRIMARY KEY (`id_pass`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -83,8 +82,8 @@ CREATE TABLE `pass` (
 --
 
 /*!40000 ALTER TABLE `pass` DISABLE KEYS */;
-INSERT INTO `pass` (`id_pass`,`pass`,`estado`) VALUES 
- (1,'ee9f7f2ce3c81df28ab36ddb782110f086128c62',1);
+INSERT INTO `pass` (`id_pass`,`pass`,`estado`,`fecha`) VALUES 
+ (1,'ee9f7f2ce3c81df28ab36ddb782110f086128c62',1,'');
 /*!40000 ALTER TABLE `pass` ENABLE KEYS */;
 
 
